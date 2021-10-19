@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">{{item.Ename}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="singleemp">Home</a>
+          <!-- <a class="nav-link" href="RequestTraining">Request Training</a> -->
+          <!-- <a class="nav-link" href="#">Request Status</a> -->
+          <a class="nav-link" href="">Log Out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <table>
+    <thead>
+       <tr>
+          <th>Request id</th>
+          <th>Employee id</th>
+          <th>Employee Name</th>
+          <th>Requested Tech</th>
+          <th>Trainer</th>
+          <th>Number of Participants</th>
+          <th>Training Mode</th>
+          <th>Starting date</th>
+          <th>Ending date</th>
+          <th>Comment</th>
+          <th>Status</th>
+          <th></th>
+          <th></th>
+          <th></th>
+
+       </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let item of Report"  >
+          <td>{{item.Rid}}</td>
+          <td>{{item.Empid}}</td>
+          <td>{{item.Ename}}</td>
+          <td>{{item.Techname}}</td>
+          <td>{{item.SuggestedTrainer}}</td>
+          <td>{{item.NumberofPart}}</td>
+          <td>{{item.TrainingMode}}</td>
+          <td>{{item.Startdate}}</td>
+          <td>{{item.Enddate}}</td>
+          <td>{{item.Comment}}</td>
+          <td>{{item.Status}}</td>
+          <td>
+          </td>
+       </tr>
+    </tbody>
+ </table>

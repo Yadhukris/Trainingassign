@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Admin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!-- <a class="nav-link active" aria-current="page" href="singleemp">Home</a> -->
+                <a class="nav-link" href="LndHome">Home</a>
+                <!-- <a class="nav-link" href="#">Request Status</a> -->
+                <a class="nav-link" href="">Log Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<table>
+    <thead>
+        <tr>
+            <th>Allocation id</th>
+            <th>Tech</th>
+            <th>Trainer</th>
+            <th>Starting date</th>
+            <th>Ending date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of allocatedata">
+            <td>{{item.Aid}}</td>
+
+            <td>{{item.Techname}}</td>
+            <td>{{item.SuggestedTrainer}}</td>
+
+            <td>{{item.Startdate}}</td>
+            <td>{{item.Enddate}}</td>
+            <td>{{item.StartTime}}</td>
+            <td>{{item.EndTime}}</td>
+
+            <td><button type="button" class="btn btn-danger"  (click)="viewpaticipants(item.Aid);" >View Participants</button> </td>
+
+        </tr>
+    </tbody>
+</table>

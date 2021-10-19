@@ -1,0 +1,47 @@
+<body>
+
+    <img src="https://martechseries.com/wp-content/uploads/2021/04/Orion-Innovation-Secures-U.S.-Patent-for-Zodiacs-Unified-Advertising-Delivery-to-Consumer-Devices.jpg" alt="">
+
+    <div class="center">
+
+        <h2>Login</h2>
+
+        <form (ngSubmit)="loginEmp()">
+
+            <div class="txt_field">
+
+                <input type="text" class="form-control" id="text" #Empid="ngModel" [(ngModel)]="emp.Empid" name="Empid" required>
+
+                <span></span>
+
+                <label>Username</label>
+
+            </div>
+
+            <div class="txt_field">
+
+                <input type="password" class="form-control" id="text"   #password="ngModel"
+
+                [(ngModel)]="emp.Password" name="Password" required>
+
+                <span></span>
+
+                <label>Password</label>
+
+            </div>
+
+            <div class="pass">Forgot Password?</div>
+
+            <input  type="submit" class="btnRegister" value="Login" id="btn_submit">
+
+            <div class="signup_link">
+
+               
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>

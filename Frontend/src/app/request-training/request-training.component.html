@@ -1,0 +1,54 @@
+
+<body background="https://martechseries.com/wp-content/uploads/2021/04/Orion-Innovation-Secures-U.S.-Patent-for-Zodiacs-Unified-Advertising-Delivery-to-Consumer-Devices.jpg">
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand"style="color: white;">Welcome&nbsp;{{item.Ename}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="singleemp" style="color: white;">Home</a>
+        <!-- <a class="nav-link" href="RequestTraining">Request Training</a> -->
+        <!-- <a class="nav-link" href="#">Request Status</a> -->
+        <a class="nav-link" href=""style="color: white; position: relative;left: 150vh;">Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <form (ngSubmit)="trainerreq()">
+
+    <div class="form-group">
+      Employee Id
+      <input class="form-control" name="Empid" #Empid="ngModel" [(ngModel)]="item.Empid" [readonly]="true">
+    </div>
+    <div class="form-group">
+      Employee Name
+      <input class="form-control" name="Ename" #Empid="ngModel" [(ngModel)]="item.Ename" [readonly]="true">
+    </div>
+    <div class="form-group">
+      Tech Name
+      <input class="form-control" name="Techname" #Techname="ngModel" [(ngModel)]="Req.Techname">
+    </div>
+    <div class="form-group">
+      Suggested Trainer
+      <input class="form-control" name="SuggestedTrainer" #SuggestedTrainer="ngModel"
+        [(ngModel)]="Req.SuggestedTrainer">
+    </div>
+    <div class="form-group">
+      Number of participants
+      <input class="form-control" name="NumberofPart" #NumberofPart="ngModel" [(ngModel)]="Req.NumberofPart">
+    </div>
+    <div class="form-group">
+      Suggested date
+      <input type="date" class="form-control" name="Startdate" #Startdate="ngModel" [(ngModel)]="Req.Startdate">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+</div>
+</body>

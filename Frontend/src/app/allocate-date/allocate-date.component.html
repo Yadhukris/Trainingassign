@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Admin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!-- <a class="nav-link active" aria-current="page" href="singleemp">Home</a> -->
+                <a class="nav-link" href="LndHome">Home</a>
+                <a class="nav-link" href="Empreq">Employee Training Request</a>
+                <!-- <a class="nav-link" href="#">Request Status</a> -->
+                <a class="nav-link" href="">Log Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<h3>Allocate a trainer</h3>
+
+<div class="container">
+    <form (ngSubmit)="TrainingAllocate()">
+        <input type="hidden" class="form-control" name="Rid" #Rid="ngModel" [(ngModel)]="Req.Rid" [readonly]="true">
+        <!-- <div class="form-group">
+            Employee Id
+            <input class="form-control" name="Empid" #Empid="ngModel" [(ngModel)]="Req.Empid" [readonly]="true">
+        </div> -->
+        <!-- <div class="form-group">
+            Employee Name
+            <input class="form-control" name="Ename" #Empid="ngModel" [(ngModel)]="Req.Ename" [readonly]="true">
+        </div> -->
+        <div class="form-group">
+            Tech Name
+            <input class="form-control" name="Techname" #Techname="ngModel" [(ngModel)]="Req.Techname">
+        </div>
+        <div class="form-group">
+             Trainer
+            <input class="form-control" name="SuggestedTrainer" #SuggestedTrainer="ngModel"
+                [(ngModel)]="Req.SuggestedTrainer">
+        </div>
+        <!-- <div class="form-group">
+            Number of participants
+            <input class="form-control" name="NumberofPart" #NumberofPart="ngModel" [(ngModel)]="Req.NumberofPart">
+        </div> -->
+        <div class="form-group">
+            Start date
+            <input type="date" class="form-control" name="Startdate" #Startdate="ngModel" [(ngModel)]="Req.Startdate">
+        </div>
+        <div class="form-group">
+            End date
+            <input type="date" class="form-control" name="Startdate" #Startdate="ngModel" [(ngModel)]="Report.Enddate">
+        </div>
+        
+        <div class="form-group">Start Time<input type="time" class="form-control" name="StartTime" #StartTime="ngModel" [(ngModel)]="allocation.StartTime"></div>
+      
+<div class="form-group">End Time<input type="time" class="form-control" name="EndTime" #EndTime="ngModel" [(ngModel)]="allocation.EndTime"></div>
+
+
+
+
+        <br>
+        <!-- <div class="form-group">
+            Comment
+            <input type="text" class="form-control" name="Comment" #Comment="ngModel" [(ngModel)]="Report.Comment">
+        </div> -->
+        <br>
+        <button type="submit">Confirm</button>
+    </form>
+
+</div>

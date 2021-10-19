@@ -1,0 +1,26 @@
+ th, td {
+    border: 1px solid black;
+  }
+  table {
+    width: 100%;
+  }
+  
+  th {
+    height: 70px;
+  }
+  
+  td ,th {
+    text-align: center;
+  }
+  
+  nav-link{
+    text-align: right;
+   
+}
+
+nav-link-logout{
+    position: relative;
+    text-align: right;
+ 
+    color: black;
+}
